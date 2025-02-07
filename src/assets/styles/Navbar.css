@@ -51,7 +51,7 @@
     background: none;
     border: none;
     outline: none;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
     color: #148bff;
     z-index: 1001;
@@ -61,16 +61,18 @@
 .hamburger-icon:hover,
 .hamburger-icon:active,
 .hamburger-icon:focus {
-  outline: none;
+    outline: none;
+    box-shadow: none;
 }
 
 @media screen and (max-width: 850px) {
     .navbar {
-        padding-left: auto;
+        height: 65px;
     }
 
     .navbar-logo img {
         margin-left: 0;
+        height: 65px;
     }
 
     .hamburger-icon {
