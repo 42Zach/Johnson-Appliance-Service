@@ -40,7 +40,7 @@ const Navbar = () => {
         )}
 
         <div className={`navbar-links ${isMobile ? (isMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed') : ''}`}>
-          <Link to="/" onClick={() => isMobile && toggleMenu()}>
+          <Link to="/" onClick={() => isMobile && toggleMenu()} className='first-link'>
             Home
           </Link>
           <Link to="/" onClick={() => isMobile && toggleMenu()}>

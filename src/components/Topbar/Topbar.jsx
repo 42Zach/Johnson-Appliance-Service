@@ -14,7 +14,7 @@ const Topbar = () => {
                     <a href="https://www.facebook.com/johnsonapp/" target="_blank" rel="noopener noreferrer">
                         <FaFacebook className="social-icon" />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/johnson_appliance/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram className="social-icon" />
                     </a>
                 </div>
