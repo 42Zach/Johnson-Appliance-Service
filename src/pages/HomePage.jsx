@@ -10,7 +10,7 @@ const HomePage = () => {
             <main className='homepage-content'>
                 <div className="introduction">
                     <h1>Serving the Bitterroot Valley since 1972.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sit qui commodi accusamus rem repudiandae ipsum dicta ad quam minus, rerum, in odit dignissimos ex, distinctio hic cupiditate unde magnam.</p>
+                    <p>For over 50 years, Johnson Appliance Service has been keeping homes in the Bitterroot Valley running smoothly. As a family-owned business, we take pride in providing honest, reliable, and expert appliance repair services to our community. Whether it's your washer, fridge, or stove, we're here to help - just like family.</p>
                     <button className='learn-more-button'>Learn More</button>
                 </div>
                 <div className="introduction-image"><img src={FourInFront} alt="Jack, Jay, Joe, and Cade Johnson" /></div>
