@@ -10,7 +10,7 @@ const HomePage = () => {
             <main className='homepage-content'>
                 <div className="introduction">
                     <h1>Serving the Bitterroot Valley since 1972.</h1>
-                    <p>For 50+ years, Johnson Appliance Service has been a trusted name in the Bitterroot Valley. As a family-owned business, we take pride in providing honest, expert repairs—because you deserve service that feels like family.</p>
+                    <p>For 50+ years, Johnson Appliance Service has been a trusted name in the Bitterroot Valley. As a family-owned business, we take pride in providing honest and expert repairs—because you deserve service that feels like family.</p>
                     <a className='learn-more-button' href='tel:+14063633592'>Shedule A Repair</a>
                 </div>
                 <div className="introduction-image"><img src={FourInFront} alt="Jack, Jay, Joe, and Cade Johnson" /></div>
@@ -46,6 +46,12 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* NEEEEEEED TO ADDD LOCATION ADDRESS
+            !
+            !
+            !
+            ! */}
 
             <section className="map-section">
                 <h2>Find Us</h2>
