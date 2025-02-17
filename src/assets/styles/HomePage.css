@@ -9,10 +9,11 @@ body {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .introduction {
+    text-align: center;
     flex: 1;
     max-width: 50%;
     padding-right: 40px;
@@ -133,6 +134,12 @@ body {
     color: #333;
 }
 
+.location-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
 .map-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -147,11 +154,18 @@ body {
     border: none;
 }
 
+.full-width-footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
     .homepage-content {
         flex-direction: column;
         padding: 20px;
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .introduction,
@@ -166,13 +180,29 @@ body {
 
     .introduction h1 {
         font-size: 2rem;
+        padding: 0 25px;
     }
 
     .introduction p {
         font-size: 1rem;
+        padding: 0 25px;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .map-section {
+        padding: 30px 0;
+    }
+
+    .map-container {
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: none;
+    }
+
+    .map-container iframe {
+        height: 350px;
     }
 }
