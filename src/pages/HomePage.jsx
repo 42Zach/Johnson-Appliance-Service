@@ -10,7 +10,7 @@ const HomePage = () => {
             <Navbar />
             <main className='homepage-content'>
                 <div className="introduction">
-                    <h1>Serving the Bitterroot Valley since 1972.</h1>
+                    <h1>Serving the Bitterroot Valley since 1972</h1>
                     <p>For 50+ years, Johnson Appliance Service has been a trusted name in the Bitterroot Valley. As a family-owned business, we take pride in providing honest and expert repairs—because you deserve service that feels like family.</p>
                     <a className='learn-more-button' href='tel:+14063633592'>Shedule A Repair</a>
                 </div>
