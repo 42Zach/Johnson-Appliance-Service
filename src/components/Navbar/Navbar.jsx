@@ -46,7 +46,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => isMobile && toggleMenu()}>
             Services
           </Link>
-          <Link to="/" onClick={() => isMobile && toggleMenu()}>
+          <Link to="/sales" onClick={() => isMobile && toggleMenu()}>
             Sales
           </Link>
         </div>

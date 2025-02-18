@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/styles/Footer.css';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { FaPhone } from "react-icons/fa6";
 
 const Footer = () => {
@@ -15,6 +16,9 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-section">
+                        {/* ADD LINKS
+                         HERE WITH 
+                         ROUTER LINK */}
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="/">Home</a></li>

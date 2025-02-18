@@ -32,6 +32,7 @@ body {
     margin-bottom: 30px;
 }
 
+.schedule-repair-button,
 .learn-more-button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -43,7 +44,19 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.learn-more-button:hover {
+.learn-more-button {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+}
+
+.learn-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.learn-more-button:hover,
+.schedule-repair-button:hover {
     background-color: #0d6efd;
     color: #fff
 }
