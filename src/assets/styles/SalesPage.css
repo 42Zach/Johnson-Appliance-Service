@@ -162,3 +162,22 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (min-width: 769px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .product-card {
+        padding: 30px;
+    }
+
+    .product-card h3 {
+        font-size: 1.75rem;
+    }
+
+    .product-card p {
+        font-size: 1.1rem;
+    }
+}

@@ -10,6 +10,8 @@ import refrig_one from '../assets/images/frigidaire_one.jpg';
 import dishwasher_one from '../assets/images/frigidaire_dishwasher.jpg';
 import range_one from '../assets/images/range_one.jpg';
 import frigidaire_set from '../assets/images/frigidaire_set.jpg';
+import frigidaire_microwave from '../assets/images/frigidaire_microwave.jpg';
+import frigidaire_three from '../assets/images/frigidaire_three.jpg';
 
 const SalesPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -51,8 +53,8 @@ const SalesPage = () => {
                         ))}
                     </div>
                     <div className="product-description">
-                        <h3>Washers & Dryers</h3>
-                        <p>Built to last, Speed Queen appliances are designed for durability and performance.</p>
+                        <h3>Now Offering All Speed Queen Models</h3>
+                        <p>Built to last, Speed Queen appliances are designed for durability and performance</p>
                     </div>
                     {/* <div className="product-grid">
                         <div className="product-card">
@@ -72,12 +74,17 @@ const SalesPage = () => {
                             <p>Keep your food fresh with Frigidaire's energy-efficient refrigerators.</p>
                         </div>
                         <div className="product-card">
+                            <img src={frigidaire_three} alt="Frigidaire Upright Freezer" />
+                            <h3>Freezers</h3>
+                            <p>Store your food in style with Frigidaire's sleek upright & chest freezers.</p>
+                        </div>
+                        <div className="product-card">
                             <img src={dishwasher_one} alt="" />
                             <h3>Dishwashers</h3>
                             <p>Effortlessly clean your dishes with Frigidaire's quiet and powerful dishwashers.</p>
                         </div>
                         <div className="product-card">
-                            <img src="" alt="Frigidaire Microwave" />
+                            <img src={frigidaire_microwave} alt="Frigidaire Microwave" />
                             <h3>Microwaves</h3>
                             <p>Cook and reheat with precision using Frigidaire's versatile microwaves.</p>
                         </div>
