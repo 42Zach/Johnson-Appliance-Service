@@ -18,6 +18,41 @@
     margin-bottom: 40px;
 }
 
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.animate-fading {
+    animation: fading 5s infinite;
+}
+
+.product-description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #148bff;
+}
+
+.product-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
 .showroom-section {
     margin-bottom: 40px;
 }
@@ -90,13 +125,36 @@
     line-height: 1.6;
 }
 
+@keyframes fading {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 768px) {
+    .sales-page {
+        margin-top: 90px;
+    }
+
     .sales-page h1 {
         font-size: 2rem;
     }
 
     .sales-page .subtitle {
         font-size: 1rem;
+    }
+
+    .slideshow {
+        max-width: 100%;
     }
 
     .showroom-images,

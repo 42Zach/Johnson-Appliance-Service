@@ -37,7 +37,7 @@ const HomePage = () => {
                         <h3>New Speed Queen & Frigidaire Appliances</h3>
                         <p>Shop the latest models from Speed Queen and Frigidaire appliances.</p>
                         <div className="learn-more-container">
-                            <Link to="/" className="learn-more-button">Learn More</Link>
+                            <Link to="/sales" className="learn-more-button">Learn More</Link>
                         </div>
                     </div>
                     <div className="service-card">

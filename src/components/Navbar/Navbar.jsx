@@ -30,7 +30,9 @@ const Navbar = () => {
       <Topbar />
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
 
         {isMobile && (
@@ -43,9 +45,9 @@ const Navbar = () => {
           <Link to="/" onClick={() => isMobile && toggleMenu()} className='first-link'>
             Home
           </Link>
-          <Link to="/" onClick={() => isMobile && toggleMenu()}>
+          {/* <Link to="/" onClick={() => isMobile && toggleMenu()}>
             Services
-          </Link>
+          </Link> */}
           <Link to="/sales" onClick={() => isMobile && toggleMenu()}>
             Sales
           </Link>
