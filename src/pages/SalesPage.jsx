@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import '../assets/styles/SalesPage.css';
@@ -8,10 +9,17 @@ import tc5 from '../assets/images/tc5.jpg';
 import sq_electrolux from '../assets/images/sq_electrolux.jpg';
 import refrig_one from '../assets/images/frigidaire_one.jpg';
 import dishwasher_one from '../assets/images/frigidaire_dishwasher.jpg';
+import dishwasher_two from '../assets/images/dishwasher_two.jpg';
 import range_one from '../assets/images/range_one.jpg';
 import frigidaire_set from '../assets/images/frigidaire_set.jpg';
+import frigidaire_set_two from '../assets/images/frigidaire_set_two.jpg';
 import frigidaire_microwave from '../assets/images/frigidaire_microwave.jpg';
+import frigidaire_two from '../assets/images/frigidaire_two.jpg';
 import frigidaire_three from '../assets/images/frigidaire_three.jpg';
+import frigidaire_four from '../assets/images/frigidaire_four.jpg';
+import frigidaire_five from '../assets/images/frigidaire_five.jpg';
+
+//NEW IMAGES
 
 const SalesPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,6 +30,24 @@ const SalesPage = () => {
         { src: tr5, alt: "Speed Queen TR5" },
         { src: sq_electrolux, alt: "Speed Queen Electrolux" },
     ];
+
+    const applianceImages = {
+        refrigerators: [frigidaire_four, frigidaire_two, frigidaire_five],
+        freezers: [frigidaire_three],
+        dishwashers: [dishwasher_one, dishwasher_two],
+        microwaves: [frigidaire_microwave],
+        ranges: [range_one],
+        laundry: [frigidaire_set_two, frigidaire_set]
+
+    };
+
+    const handleNext = (images, currIndex, setCurrIndex) => {
+        setCurrIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }
+
+    const handlePrev = (images, currIndex, setCurrIndex) => {
+        setCurrIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -68,6 +94,44 @@ const SalesPage = () => {
                 <section className="brand-section">
                     <h2>Frigidaire Appliances</h2>
                     <div className="product-grid">
+                        {Object.entries(applianceImages).map(([appliance, images]) => {
+                            const [currIndex, setCurrIndex] = useState(0);
+
+                            return (
+                                <div className="product-card" key={appliance}>
+                                    <div className="image-slider">
+                                        <img
+                                            src={images[currIndex]}
+                                            alt={`Frigidaire ${appliance}`}
+                                            className="slider-image"
+                                        />
+                                        <button
+                                            className="slider-button prev"
+                                            onClick={() => handlePrev(images, currIndex, setCurrIndex)}
+                                        >
+                                            <FaChevronLeft />
+                                        </button>
+                                        <button
+                                            className="slider-button next"
+                                            onClick={() => handleNext(images, currIndex, setCurrIndex)}
+                                        >
+                                            <FaChevronRight />
+                                        </button>
+                                    </div>
+                                    <h3>{appliance.charAt(0).toUpperCase() + appliance.slice(1)}</h3>
+                                    <p>
+                                        {appliance === 'refrigerators' && "Keep your food fresh with Frigidaire's energy-efficient refrigerators."}
+                                        {appliance === 'freezers' && "Keep your food fresh with Frigidaire's energy-efficient freezers."}
+                                        {appliance === 'dishwashers' && "Effortlessly clean your dishes with Frigidaire's quiet and powerful dishwashers."}
+                                        {appliance === 'microwaves' && "Cook and reheat with precision using Frigidaire's versatile microwaves."}
+                                        {appliance === 'ranges' && "Prepare meals with ease using Frigidaire's stylish and functional ranges."}
+                                        {appliance === 'laundry' && "Simplify laundry day with Frigidaire's efficient washers and dryers."}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    {/* <div className="product-grid">
                         <div className="product-card">
                             <img src={refrig_one} alt="Frigidaire Refrigerator" />
                             <h3>Refrigerators</h3>
@@ -98,7 +162,7 @@ const SalesPage = () => {
                             <h3>Laundry</h3>
                             <p>Simplify laundry day with Frigidaire's efficient washers and dryers.</p>
                         </div>
-                    </div>
+                    </div> */}
                 </section>
             </main>
             <Footer />

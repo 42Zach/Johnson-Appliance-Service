@@ -205,6 +205,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .service-card {
+        text-align: center;
+    }
+
     .map-section {
         padding: 30px 0;
     }

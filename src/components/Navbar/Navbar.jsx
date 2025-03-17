@@ -45,11 +45,11 @@ const Navbar = () => {
           <Link to="/" onClick={() => isMobile && toggleMenu()} className='first-link'>
             Home
           </Link>
-          {/* <Link to="/" onClick={() => isMobile && toggleMenu()}>
-            Services
-          </Link> */}
           <Link to="/sales" onClick={() => isMobile && toggleMenu()}>
             Sales
+          </Link>
+          <Link to="/about" onClick={() => isMobile && toggleMenu()}>
+            About Us
           </Link>
         </div>
       </nav>
