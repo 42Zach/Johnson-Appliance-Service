@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/HomePage.css';
 import Navbar from '../components/Navbar/Navbar';
 import FourInFront from '../assets/images/FourInFront.jpg';
+import SQLogo from '../assets/images/SQLogo.jpg';
+import FrigidaireLogo from '../assets/images/FrigidaireLogo.png';
 import Footer from '../components/Footer/Footer';
 
 const HomePage = () => {
@@ -34,10 +36,14 @@ const HomePage = () => {
                         <p>Find genuine replacement parts for your appliances.</p>
                     </div>
                     <div className="service-card">
-                        <h3>New Speed Queen & Frigidaire Appliances</h3>
-                        <p>Shop the latest models from Speed Queen and Frigidaire appliances.</p>
+                        <h3>New Appliances</h3>
+                        <div className="brand-logos">
+                            <img src={SQLogo} alt="Speed Queen Logo" className='brand-logo' />
+                            <img src={FrigidaireLogo} alt="Frigidaire Logo" className='brand-logo' />
+                        </div>
+                        <p>Shop the latest models from our trusted brands.</p>
                         <div className="learn-more-container">
-                            <Link to="/sales" className="learn-more-button">Learn More</Link>
+                            <Link to="/sales" className="learn-more-button">Explore Options</Link>
                         </div>
                     </div>
                     <div className="service-card">
