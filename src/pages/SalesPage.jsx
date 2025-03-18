@@ -18,6 +18,7 @@ import frigidaire_two from '../assets/images/frigidaire_two.jpg';
 import frigidaire_three from '../assets/images/frigidaire_three.jpg';
 import frigidaire_four from '../assets/images/frigidaire_four.jpg';
 import frigidaire_five from '../assets/images/frigidaire_five.jpg';
+import { use } from 'react';
 
 //NEW IMAGES
 
@@ -41,6 +42,15 @@ const SalesPage = () => {
 
     };
 
+    useEffect(() => {
+        Object.values(applianceImages).forEach((images) => {
+            images.forEach((src) => {
+                const img = new Image();
+                img.src = src;
+            });
+        });
+    }, [applianceImages]);
+
     const handleNext = (images, currIndex, setCurrIndex) => {
         setCurrIndex((prevIndex) => (prevIndex + 1) % images.length);
     }
@@ -56,7 +66,6 @@ const SalesPage = () => {
 
         return () => clearInterval(interval);
     }, [slides.length]);
-
 
     return (
         <>
@@ -95,25 +104,26 @@ const SalesPage = () => {
                     <h2>Frigidaire Appliances</h2>
                     <div className="product-grid">
                         {Object.entries(applianceImages).map(([appliance, images]) => {
-                            const [currIndex, setCurrIndex] = useState(0);
+                            const [currentIndex, setCurrentIndex] = useState(0);
 
                             return (
                                 <div className="product-card" key={appliance}>
                                     <div className="image-slider">
                                         <img
-                                            src={images[currIndex]}
+                                            src={images[currentIndex]}
                                             alt={`Frigidaire ${appliance}`}
                                             className="slider-image"
+                                            loading="lazy"
                                         />
                                         <button
                                             className="slider-button prev"
-                                            onClick={() => handlePrev(images, currIndex, setCurrIndex)}
+                                            onClick={() => handlePrev(images, currentIndex, setCurrentIndex)}
                                         >
                                             <FaChevronLeft />
                                         </button>
                                         <button
                                             className="slider-button next"
-                                            onClick={() => handleNext(images, currIndex, setCurrIndex)}
+                                            onClick={() => handleNext(images, currentIndex, setCurrentIndex)}
                                         >
                                             <FaChevronRight />
                                         </button>
@@ -121,7 +131,6 @@ const SalesPage = () => {
                                     <h3>{appliance.charAt(0).toUpperCase() + appliance.slice(1)}</h3>
                                     <p>
                                         {appliance === 'refrigerators' && "Keep your food fresh with Frigidaire's energy-efficient refrigerators."}
-                                        {appliance === 'freezers' && "Keep your food fresh with Frigidaire's energy-efficient freezers."}
                                         {appliance === 'dishwashers' && "Effortlessly clean your dishes with Frigidaire's quiet and powerful dishwashers."}
                                         {appliance === 'microwaves' && "Cook and reheat with precision using Frigidaire's versatile microwaves."}
                                         {appliance === 'ranges' && "Prepare meals with ease using Frigidaire's stylish and functional ranges."}
