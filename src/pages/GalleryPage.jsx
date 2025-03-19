@@ -7,6 +7,8 @@ import GalleryTwo from '../assets/images/GalleryTwo.jpg';
 import GalleryThree from '../assets/images/GalleryThree.jpg';
 import GalleryFour from '../assets/images/GalleryFour.jpg';
 import GalleryFive from '../assets/images/GalleryFive.jpg';
+import GallerySix from '../assets/images/GallerySix.jpg';
+import GallerySeven from '../assets/images/GallerySeven.jpg';
 
 const GalleryPage = () => {
     const galleryImages = [
@@ -15,6 +17,8 @@ const GalleryPage = () => {
         { src: GalleryThree, alt: 'Jay, Grandpa, and Beau sitting on the tailgate' },
         { src: GalleryFour, alt: 'The lint ball solar system' },
         { src: GalleryFive, alt: 'Cat nap in the dryer' },
+        { src: GallerySix, alt: 'Joe standing on the counter' },
+        { src: GallerySeven, alt: 'Grandpa picking apples' },
     ];
 
     return (
