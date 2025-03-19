@@ -48,8 +48,8 @@ const Navbar = () => {
           <Link to="/sales" onClick={() => isMobile && toggleMenu()}>
             Sales
           </Link>
-          <Link to="/about" onClick={() => isMobile && toggleMenu()}>
-            About Us
+          <Link to="/gallery" onClick={() => isMobile && toggleMenu()}>
+            Gallery
           </Link>
         </div>
       </nav>
