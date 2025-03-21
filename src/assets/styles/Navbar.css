@@ -152,23 +152,19 @@
 
     .navbar-links a {
         width: 100%;
-        padding: 15px 20px; /* Comfortable padding */
-        background-color: #ffffff; /* White background for contrast */
+        padding: 15px 20px;
+        background-color: #ffffff;
         text-align: center;
-        color: #148bff; /* Blue text color */
-        font-size: 18px; /* Slightly larger font size */
-        font-weight: 500; /* Medium font weight */
-        border-bottom: 1px solid #d5d5d5; /* Light border for separation */
-        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+        color: #148bff;
+        font-size: 18px;
+        font-weight: 500;
+        border-bottom: 1px solid #d5d5d5;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
     
     .navbar-links a:hover {
-        background-color: #148bff; /* Blue background on hover */
-        color: white; /* White text on hover */
-    }
-    
-    .navbar-links a:last-child {
-        border-bottom: none; /* Remove border from the last link */
+        background-color: #148bff;
+        color: white;
     }
 
     .overlay {
