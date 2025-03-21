@@ -2,14 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import '../assets/styles/GalleryPage.css';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import GalleryOne from '../assets/images/GalleryOne.jpg';
-import GalleryTwo from '../assets/images/GalleryTwo.jpg';
-import GalleryThree from '../assets/images/GalleryThree.jpg';
-import GalleryFour from '../assets/images/GalleryFour.jpg';
-import GalleryFive from '../assets/images/GalleryFive.jpg';
-import GallerySix from '../assets/images/GallerySix.jpg';
-import GallerySeven from '../assets/images/GallerySeven.jpg';
-import GalleryEight from '../assets/images/GalleryEight.jpg';
+import GalleryOne from '../assets/images/GalleryOne-min.jpg';
+import GalleryTwo from '../assets/images/GalleryTwo-min.jpg';
+import GalleryThree from '../assets/images/GalleryThree-min.jpg';
+import GalleryFour from '../assets/images/GalleryFour-min.jpg';
+import GalleryFive from '../assets/images/GalleryFive-min.jpg';
+import GallerySix from '../assets/images/GallerySix-min.jpg';
+import GallerySeven from '../assets/images/GallerySeven-min.jpg';
+import GalleryEight from '../assets/images/GalleryEight-min.jpg';
+//Images after have NOT been compressed
 
 const GalleryPage = () => {
     const galleryItemsRef = useRef([]);
