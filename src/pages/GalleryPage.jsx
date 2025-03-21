@@ -9,16 +9,18 @@ import GalleryFour from '../assets/images/GalleryFour.jpg';
 import GalleryFive from '../assets/images/GalleryFive.jpg';
 import GallerySix from '../assets/images/GallerySix.jpg';
 import GallerySeven from '../assets/images/GallerySeven.jpg';
+import GalleryEight from '../assets/images/GalleryEight.jpg';
 
 const GalleryPage = () => {
     const galleryImages = [
-        { src: GalleryOne, alt: 'Grandpa & Zachary rebuilding a washer transmission' },
         { src: GalleryTwo, alt: 'Zachary working on a washer transmission' },
         { src: GalleryThree, alt: 'Jay, Grandpa, and Beau sitting on the tailgate' },
         { src: GalleryFour, alt: 'The lint ball solar system' },
         { src: GalleryFive, alt: 'Cat nap in the dryer' },
-        { src: GallerySix, alt: 'Joe standing on the counter' },
+        { src: GalleryEight, alt: 'Jonas hooking up a gas range' },
         { src: GallerySeven, alt: 'Grandpa picking apples' },
+        { src: GallerySix, alt: 'Joe standing on the counter' },
+        { src: GalleryOne, alt: 'Grandpa & Zachary rebuilding a washer transmission' },
     ];
 
     return (

@@ -41,7 +41,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .learn-more-button {
@@ -58,7 +60,9 @@ body {
 .learn-more-button:hover,
 .schedule-repair-button:hover {
     background-color: #0d6efd;
-    color: #fff
+    color: rgb(244, 244, 244);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(20, 139, 255, 0.6);
 }
 
 .introduction-image {
@@ -135,6 +139,15 @@ body {
     color: #555;
 }
 
+.service-card.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.service-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 .brand-logos {
     display: flex;
     justify-content: center;
@@ -189,6 +202,17 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {

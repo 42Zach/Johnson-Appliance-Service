@@ -7,10 +7,11 @@ import tr7 from '../assets/images/tr7_one-min.jpg';
 import tr5 from '../assets/images/tr5-min.jpg';
 import tc5 from '../assets/images/tc5-min.jpg';
 import sq_electrolux from '../assets/images/sq_electrolux-min.jpg';
-import refrig_one from '../assets/images/frigidaire_one.jpg';
 import dishwasher_one from '../assets/images/frigidaire_dishwasher-min.jpg';
 import dishwasher_two from '../assets/images/dishwasher_two-min.jpg';
 import range_one from '../assets/images/range_one-min.jpg';
+import range_two from '../assets/images/range_two-min.jpg';
+import range_three from '../assets/images/range_three-min.jpg';
 import frigidaire_set from '../assets/images/frigidaire_set-min.jpg';
 import frigidaire_set_two from '../assets/images/frigidaire_set_two-min.jpg';
 import frigidaire_microwave from '../assets/images/frigidaire_microwave-min.jpg';
@@ -18,9 +19,8 @@ import frigidaire_two from '../assets/images/frigidaire_two-min.jpg';
 import frigidaire_three from '../assets/images/frigidaire_three-min.jpg';
 import frigidaire_four from '../assets/images/frigidaire_four-min.jpg';
 import frigidaire_five from '../assets/images/frigidaire_five-min.jpg';
-import { use } from 'react';
-
-//NEW IMAGES
+import freezer_two from '../assets/images/freezer_two-min.jpg';
+import freezer_three from '../assets/images/freezer_three-min.jpg';
 
 const SalesPage = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,10 +34,10 @@ const SalesPage = () => {
 
     const applianceImages = {
         refrigerators: [frigidaire_four, frigidaire_two, frigidaire_five],
-        freezers: [frigidaire_three],
+        freezers: [frigidaire_three, freezer_two, freezer_three],
         dishwashers: [dishwasher_one, dishwasher_two],
         microwaves: [frigidaire_microwave],
-        ranges: [range_one],
+        ranges: [range_one, range_two, range_three],
         laundry: [frigidaire_set_two, frigidaire_set]
 
     };
@@ -91,13 +91,6 @@ const SalesPage = () => {
                         <h3>Now Offering All Speed Queen Models</h3>
                         <p>Built to last, Speed Queen appliances are designed for durability and performance</p>
                     </div>
-                    {/* <div className="product-grid">
-                        <div className="product-card">
-                            <img src={tr7} alt="" />
-                            <h3>Washers & Dryers</h3>
-                            <p>Built to last, Speed Queen appliances are designed for durability and performance.</p>
-                        </div>
-                    </div> */}
                 </section>
 
                 <section className="brand-section">
@@ -131,6 +124,7 @@ const SalesPage = () => {
                                     <h3>{appliance.charAt(0).toUpperCase() + appliance.slice(1)}</h3>
                                     <p>
                                         {appliance === 'refrigerators' && "Keep your food fresh with Frigidaire's energy-efficient refrigerators."}
+                                        {appliance === 'freezers' && "Store your frozen meals with Frigidaire's freezers."}
                                         {appliance === 'dishwashers' && "Effortlessly clean your dishes with Frigidaire's quiet and powerful dishwashers."}
                                         {appliance === 'microwaves' && "Cook and reheat with precision using Frigidaire's versatile microwaves."}
                                         {appliance === 'ranges' && "Prepare meals with ease using Frigidaire's stylish and functional ranges."}

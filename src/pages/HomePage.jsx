@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/HomePage.css';
 import Navbar from '../components/Navbar/Navbar';
@@ -8,6 +8,33 @@ import FrigidaireLogo from '../assets/images/FrigidaireLogo.png';
 import Footer from '../components/Footer/Footer';
 
 const HomePage = () => {
+    const serviceCardsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+        serviceCardsRef.current.forEach((card) => {
+            if (card) observer.observe(card);
+        });
+
+        return () => {
+            serviceCardsRef.current.forEach((card) => {
+                if (card) observer.unobserve(card);
+            });
+        };
+    }, []);
+
     return (
         <>
             <Navbar />
@@ -23,37 +50,57 @@ const HomePage = () => {
             <section className="services-section">
                 <h2>Our Services</h2>
                 <div className="services-grid">
-                    <div className="service-card">
-                        <h3>Appliance Repair</h3>
-                        <p>We repair all types of residential appliances, ensuring they work like new.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Warranty Work</h3>
-                        <p>We handle warranty repairs for eligible appliances.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Parts Sales</h3>
-                        <p>Find genuine replacement parts for your appliances.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>New Appliances</h3>
-                        <div className="brand-logos">
-                            <img src={SQLogo} alt="Speed Queen Logo" className='brand-logo' />
-                            <img src={FrigidaireLogo} alt="Frigidaire Logo" className='brand-logo' />
+                    {[
+                        {
+                            title: 'Appliance Repair',
+                            description: 'We repair all types of residential appliances, ensuring they work like new.',
+                        },
+                        {
+                            title: 'Warranty Work',
+                            description: 'We handle warranty repairs for eligible appliances.',
+                        },
+                        {
+                            title: 'Parts Sales',
+                            description: 'Find genuine replacement parts for your appliances.',
+                        },
+                        {
+                            title: 'New Appliances',
+                            description: 'Shop the latest models from our trusted brands.',
+                            logos: [SQLogo, FrigidaireLogo],
+                            link: '/sales',
+                        },
+                        {
+                            title: 'Reconditioned Appliance Sales',
+                            description: 'Affordable, high-quality reconditioned appliances for every need.',
+                        },
+                        {
+                            title: 'Delivery & Installation',
+                            description: 'Optional delivery and installation services within Ravalli County.',
+                        },
+                    ].map((service, index) => (
+                        <div
+                            key={index}
+                            className="service-card"
+                            ref={(el) => (serviceCardsRef.current[index] = el)}
+                        >
+                            <h3>{service.title}</h3>
+                            <p>{service.description}</p>
+                            {service.logos && (
+                                <div className="brand-logos">
+                                    {service.logos.map((logo, i) => (
+                                        <img key={i} src={logo} alt={`Brand Logo ${i + 1}`} className='brand-logo' />
+                                    ))}
+                                </div>
+                            )}
+                            {service.link && (
+                                <div className="learn-more-container">
+                                    <Link to={service.link} className="learn-more-button">
+                                        Explore Options
+                                    </Link>
+                                </div>
+                            )}
                         </div>
-                        <p>Shop the latest models from our trusted brands.</p>
-                        <div className="learn-more-container">
-                            <Link to="/sales" className="learn-more-button">Explore Options</Link>
-                        </div>
-                    </div>
-                    <div className="service-card">
-                        <h3>Reconditioned Appliance Sales</h3>
-                        <p>Affordable, high-quality reconditioned appliances for every need.</p>
-                    </div>
-                    <div className="service-card">
-                        <h3>Delivery & Installation</h3>
-                        <p>Optional delivery and installation services within Ravalli County.</p>
-                    </div>
+                    ))}
                 </div>
             </section>
 
