@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       <Topbar />
-      <nav className="navbar">
+      <nav className={`navbar ${isMobile && isMenuOpen ? 'mobile-menu-open' : ''}`}>
         <div className="navbar-logo">
           <Link to="/">
             <img src={logo} alt="logo" />
@@ -36,8 +36,10 @@ const Navbar = () => {
         </div>
 
         {isMobile && (
-          <button className="hamburger-icon" onClick={toggleMenu} aria-label="toggle menu">
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          <button className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="toggle menu">
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
           </button>
         )}
 
