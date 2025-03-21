@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../assets/styles/GalleryPage.css';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
@@ -12,6 +12,32 @@ import GallerySeven from '../assets/images/GallerySeven.jpg';
 import GalleryEight from '../assets/images/GalleryEight.jpg';
 
 const GalleryPage = () => {
+    const galleryItemsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+        galleryItemsRef.current.forEach((item) => {
+            if (item) observer.observe(item);
+        });
+        return () => {
+            galleryItemsRef.current.forEach((item) => {
+                if (item) observer.unobserve(item);
+            });
+        };
+    }, []);
+
     const galleryImages = [
         { src: GalleryTwo, alt: 'Zachary working on a washer transmission' },
         { src: GalleryThree, alt: 'Jay, Grandpa, and Beau sitting on the tailgate' },
@@ -32,7 +58,11 @@ const GalleryPage = () => {
 
                 <div className="gallery-grid">
                     {galleryImages.map((image, index) => (
-                        <div className="gallery-item" key={index}>
+                        <div
+                            className="gallery-item"
+                            key={index}
+                            ref={(el) => (galleryItemsRef.current[index] = el)} // Assign ref to each item
+                        >
                             <img src={image.src} alt={image.alt} />
                         </div>
                     ))}
