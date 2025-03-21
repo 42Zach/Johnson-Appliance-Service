@@ -107,7 +107,7 @@
 @media screen and (max-width: 850px) {
     .hamburger-icon {
         display: block;
-        margin-right: 50px; /* Ensure consistent spacing */
+        margin-right: 50px;
     }
 
     .navbar {
