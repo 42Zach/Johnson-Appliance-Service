@@ -21,10 +21,10 @@ const Footer = () => {
                          ROUTER LINK */}
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="/">Home</a></li>
+                            <li><Link to="/" >Home</Link></li>
                             {/* <li><a href="/">Services</a></li> */}
-                            <li><a href="/">Sales</a></li>
-                            <li><a href='/gallery'>Gallery</a></li>
+                            <li><Link to="/sales" >Sales</Link></li>
+                            <li><Link to="/gallery" >Gallery</Link></li>
                         </ul>
                     </div>
 
