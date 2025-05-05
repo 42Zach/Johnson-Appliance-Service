@@ -9,16 +9,14 @@ import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="sales" element={<SalesPage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="gallery" element={<GalleryPage />} />
+        <Route path="/sales" element={<SalesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </Router>
   )
