@@ -40,9 +40,10 @@ const HomePage = () => {
             <Navbar />
             <main className='homepage-content'>
                 <div className="introduction">
+                    <h2 style={{ color: 'red', fontWeight: 'bold' }}>📢 We’re Open! Our phone lines are currently down, please call or text us at (406) 369-5313</h2>
                     <h1>Serving the Bitterroot Valley since 1972</h1>
                     <p>For 50+ years, Johnson Appliance Service has been a trusted name in the Bitterroot Valley. As a family-owned business, we take pride in providing honest and expert repairs—because you deserve service that feels like family.</p>
-                    <a className='schedule-repair-button' href='tel:+14063633592'>Shedule A Repair</a>
+                    <a className='schedule-repair-button' href='tel:+14063633592'>Schedule A Repair</a>
                 </div>
                 <div className="introduction-image"><img src={FourInFront} alt="Jack, Jay, Joe, and Cade Johnson" /></div>
             </main>
