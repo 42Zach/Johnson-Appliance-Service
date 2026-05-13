@@ -110,7 +110,7 @@ const HomePage = () => {
                 <p className="location-text">142 Canyon Falls Way, Hamilton, MT</p>
                 <div className="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d794.7449700396718!2d-114.1601625360771!3d46.260624704600204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535eb756cc152f91%3A0x16310c79454dc073!2s1151%20A%20N%201st%20St%2C%20Hamilton%2C%20MT%2059840!5e1!3m2!1sen!2sus!4v1774366584899!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.480745303238!2d-114.16220608723414!3d46.26054797097754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535eb756d2784ac7%3A0xc458c24c64d1ad1!2s142%20Cyn%20Fls%20Wy%2C%20Hamilton%2C%20MT%2059840!5e0!3m2!1sen!2sus!4v1778715478987!5m2!1sen!2sus"
                         width="100%"
                         height="450"
                         style={{ border: 0 }}

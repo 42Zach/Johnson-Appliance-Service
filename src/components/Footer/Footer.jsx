@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-section">
                         <h3>Contact Us</h3>
-                        <p>421 S 1st St, Hamilton, MT 59840</p>
+                        <p>142 Canyon Falls Way, Hamilton, MT 59840</p>
                         <p>(406) 363-3592</p>
                     </div>
 
